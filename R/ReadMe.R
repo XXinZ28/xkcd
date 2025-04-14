@@ -15,3 +15,6 @@
 # ---------xkcd link ----------
 # https://xkcd.com/927/
 # (API) https://xkcd.com/614/info.0.json
+
+# ---------write software license----------
+usethis::use_mit_license()

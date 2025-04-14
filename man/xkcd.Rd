@@ -33,4 +33,5 @@ comic in the form of a list object.
 dino_time <- xkcd(15)
 str(dino_time)
 
+
 }

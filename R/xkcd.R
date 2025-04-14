@@ -68,3 +68,5 @@ draw_comic <- function(x) {
 # xkcd(614)$img
 # ? xkcd
 
+# usethis::use_data_raw("xkcd_comics")
+# usethis::use_r("data") to put all of our data documentation inside xkcd folder
