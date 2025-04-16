@@ -1,0 +1,49 @@
+---
+title: "An Introduction to the xkcd R package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An Introduction to the xkcd R package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(xkcd)
+```
+
+## Browsing xkcd comics
+
+The main function of the xkcd package 
+
+```{r}
+library(xkcd)
+```
+
+Then, use the `xkcd()` functiont to retrieve 
+
+```{r}
+first_comics
+```
+
+The draw_comic()
+
+```{r}
+draw_comic(first_comic)
+```
+
+## Comic Data
+The xkcd package also comes with a built-in dataset describing the first 10 xkcd comics ever published. 
+
+```{r}
+xkcd::
+```
+
+
+devtools::build_vignettes() simulates the process of install in virtual environment.
