@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# xkcd
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+- POINTS TO ADDRESS
+- what is the point? What is this package for? Is it different or unique in some way? 
+- How do I install it? 
+- How do I get started with using it? 
+
+The goal of xkcd is to ...
+ 
+
+## Installation
+
+You can install the development version of xkcd from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("XXinZ28/xkcd")
+```
+
+## Example Usage
+
+ThGiven an xkcd comic number, the xkcd() function returns a list object with metadata about the comic. 
+
+```{r example}
+library(xkcd)
+
+first_comic <- xkcd(1)
+print(first_comic)
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
