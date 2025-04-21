@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # xkcd
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/XXinZ28/xkcd/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/XXinZ28/xkcd/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/XXinZ28/xkcd/graph/badge.svg)](https://app.codecov.io/gh/XXinZ28/xkcd)
 <!-- badges: end -->
 
 The `xkcd` package provides an R interface to retrieve data about [xkcd comics](https://xkcd.com) using the xkcd [JSON API](https://xkcd.com/json.html). Most importantly, you can display these comics in the RStudio plot window.

@@ -1,28 +1,24 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # xkcd
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/XXinZ28/xkcd/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/XXinZ28/xkcd/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/XXinZ28/xkcd/graph/badge.svg)](https://app.codecov.io/gh/XXinZ28/xkcd)
 <!-- badges: end -->
 
-The `xkcd` package provides an R interface to retrieve data about [xkcd comics](https://xkcd.com) using the xkcd [JSON API](https://xkcd.com/json.html). Most importantly, you can display these comics in the RStudio plot window.
+The `xkcd` package provides an R interface to retrieve data about [xkcd
+comics](https://xkcd.com) using the xkcd [JSON
+API](https://xkcd.com/json.html). Most importantly, you can display
+these comics in the RStudio plot window.
 
 ## Installation
 
-You can install the development version of xkcd from [GitHub](https://github.com/) with:
+You can install the development version of xkcd from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -31,17 +27,53 @@ devtools::install_github("wjhopper/xkcd")
 
 ## Usage
 
-Given an xkcd comic number, the `xkcd()` function returns a list object with metadata about the comic.
+Given an xkcd comic number, the `xkcd()` function returns a list object
+with metadata about the comic.
 
-```{r example}
+``` r
 library(xkcd)
 
 first_comic <- xkcd(1)
 print(first_comic)
+#> $month
+#> [1] "1"
+#> 
+#> $num
+#> [1] 1
+#> 
+#> $link
+#> [1] ""
+#> 
+#> $year
+#> [1] "2006"
+#> 
+#> $news
+#> [1] ""
+#> 
+#> $safe_title
+#> [1] "Barrel - Part 1"
+#> 
+#> $transcript
+#> [1] "[[A boy sits in a barrel which is floating in an ocean.]]\nBoy: I wonder where I'll float next?\n[[The barrel drifts into the distance. Nothing else can be seen.]]\n{{Alt: Don't we all.}}"
+#> 
+#> $alt
+#> [1] "Don't we all."
+#> 
+#> $img
+#> [1] "https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg"
+#> 
+#> $title
+#> [1] "Barrel - Part 1"
+#> 
+#> $day
+#> [1] "1"
 ```
 
-The `draw_comic()` function takes in this list of metadata, and displays the actual comic strip image in the plot window:
+The `draw_comic()` function takes in this list of metadata, and displays
+the actual comic strip image in the plot window:
 
-```{r}
+``` r
 draw_comic(first_comic)
 ```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
