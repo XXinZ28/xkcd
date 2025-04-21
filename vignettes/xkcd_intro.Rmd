@@ -1,49 +1,39 @@
+
 ---
-title: "An Introduction to the xkcd R package"
-output: rmarkdown::html_vignette
+title: "Using the xkcd package"
 vignette: >
-  %\VignetteIndexEntry{An Introduction to the xkcd R package}
+  %\VignetteIndexEntry{Using the xkcd package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
 ---
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
 
 ```{r setup}
 library(xkcd)
 ```
 
-## Browsing xkcd comics
+## Browsing xkcd comics 
 
-The main function of the xkcd package 
+The main function of the xkcd package is to let you browse xkcd comics from with in R. Let's see how we can accomplish this. First, load the `xkcd` package.
 
-```{r}
-library(xkcd)
-```
-
-Then, use the `xkcd()` functiont to retrieve 
+Then, use the `xkcd()` function to retrieve information about a particular comics. We'll retrieve information about the very first xkcd comics, so we'll set the `number` argument equal to 1.
 
 ```{r}
-first_comics
+first_comic <- xkcd(number = 1)
+print(first_comic)
 ```
 
-The draw_comic()
-
+The `draw_comic()` function takes in this list of metadata, and displays the actual comic strip image in the plot window:
 ```{r}
 draw_comic(first_comic)
 ```
 
 ## Comic Data
-The xkcd package also comes with a built-in dataset describing the first 10 xkcd comics ever published. 
+The xkcd package also comes with a built-in data set describing the first 10 xkcd comics ever published
 
 ```{r}
-xkcd::
+xkcd::xkcd_comics
 ```
-
-
-devtools::build_vignettes() simulates the process of install in virtual environment.

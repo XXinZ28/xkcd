@@ -18,26 +18,20 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-- POINTS TO ADDRESS
-- what is the point? What is this package for? Is it different or unique in some way? 
-- How do I install it? 
-- How do I get started with using it? 
-
-The goal of xkcd is to ...
- 
+The `xkcd` package provides an R interface to retrieve data about [xkcd comics](https://xkcd.com) using the xkcd [JSON API](https://xkcd.com/json.html). Most importantly, you can display these comics in the RStudio plot window.
 
 ## Installation
 
 You can install the development version of xkcd from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-pak::pak("XXinZ28/xkcd")
+# install.packages("devtools")
+devtools::install_github("wjhopper/xkcd")
 ```
 
-## Example Usage
+## Usage
 
-ThGiven an xkcd comic number, the xkcd() function returns a list object with metadata about the comic. 
+Given an xkcd comic number, the `xkcd()` function returns a list object with metadata about the comic.
 
 ```{r example}
 library(xkcd)
@@ -46,18 +40,8 @@ first_comic <- xkcd(1)
 print(first_comic)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+The `draw_comic()` function takes in this list of metadata, and displays the actual comic strip image in the plot window:
 
-```{r cars}
-summary(cars)
+```{r}
+draw_comic(first_comic)
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
